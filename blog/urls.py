@@ -2,10 +2,9 @@ from django.contrib import admin
 from django.urls import path
 from blog import views
 
-# HTTP Request <-> HTTP Reponse
-# MVT (MVC)
+app_name = 'blog'
 
 urlpatterns = [
-    path('', views.blog),
-    path('exemplo/', views.exemplo)
+    path('', views.blog, name='home'),
+    path('exemplo/', views.exemplo, name='exemplo')
 ]
